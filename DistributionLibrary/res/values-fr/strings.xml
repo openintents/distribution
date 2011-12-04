@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oi_distribution_app_name">OI Distributie Bibliotheek</string>
+    <string name="oi_distribution_app_name">OI Distribution Library</string>
     
 	<!-- ***************************
 	     About information
 	     *************************** -->
 	
 	<!-- Automatically filled in by Launchpad: -->
-	<string name="about_translators">Launchpad Contributions:
-  Menno Vogel https://launchpad.net/~mennovogel90
-  OpenIntents devs https://launchpad.net/~openintents-devs
-  Willem-Martijn Brink https://launchpad.net/~willem-brink</string>
+	<string name="about_translators">translator-credits</string>
 	
 	<!-- ***************************
 	     Distribution
@@ -42,7 +39,7 @@
 	<string name="oi_distribution_newversion_recent_changes">Recent changes:</string>
 	
 	<!-- Button: Continue to main application. -->
-	<string name="oi_distribution_newversion_continue">Doorgaan</string>
+	<string name="oi_distribution_newversion_continue">Continue</string>
 	
 	<!-- Update -->
 	<!-- Menu command to look for updates. -->
