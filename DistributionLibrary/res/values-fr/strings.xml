@@ -8,6 +8,7 @@
 	
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
+  Jocelyn Duc https://launchpad.net/~duc-jocelyn
   John Andre https://launchpad.net/~john-andre
   OpenIntents devs https://launchpad.net/~openintents-devs
   Peli https://launchpad.net/~peli0101
@@ -70,7 +71,7 @@
     <string name="oi_distribution_aboutapp">OI propos</string>
     
     <!-- Name of the application "Barcode OI Plugin". Translations of the application name should be consistent.  -->
-    <string name="oi_distribution_barcodescanner">Barcode OI Plugin</string>
+    <string name="oi_distribution_barcodescanner">Greffon Barcode OI</string>
     <!-- Dialog message. -->
     <string name="oi_distribution_barcodescanner_not_available">Aucun scanner de code barre compatible n\'est disponible.</string>
     
