@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="org.openintents.distribution"
       android:installLocation="auto"
-      android:versionCode="2"
-      android:versionName="1.0.1">
+      android:versionCode="3"
+      android:versionName="1.0.2">
     <!-- History: 
       1.0.1 [2]: 2011-02-07
       1.0.0 [1]: 2011-01-22 -->
