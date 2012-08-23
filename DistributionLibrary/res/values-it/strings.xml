@@ -8,6 +8,7 @@
 	
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
+  Andrea Bernini https://launchpad.net/~andrea-bernini
   simone.sandri https://launchpad.net/~lexluxsox</string>
 	
 	<!-- ***************************
@@ -69,19 +70,19 @@
     <!-- Name of the application "Barcode OI Plugin". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_barcodescanner">Barcode OI Plugin</string>
     <!-- Dialog message. -->
-    <string name="oi_distribution_barcodescanner_not_available">No compatible barcode scanner is available.</string>
+    <string name="oi_distribution_barcodescanner_not_available">Non è disponibile nessun lettore per codice a barre compatibile.</string>
     
     <!-- Name of the application "OI File Manager". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_filemanager">Gestore File OI</string>
     <!-- Dialog message. -->
-    <string name="oi_distribution_filemanager_not_available">No compatible file manager is available.</string>
+    <string name="oi_distribution_filemanager_not_available">Non è disponibile nessun file manager compatibile.</string>
     
     <!-- Safe -->
     <!-- Name of the application "OI Safe". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_safe">Sicurezza OI</string>
     <!-- Dialog message. -->
-    <string name="oi_distribution_safe_not_available">No compatible application for encryption is available.</string>
-    <string name="oi_distribution_safe_not_available_decrypt">No compatible application for decryption is available.\n\nNote: You have to restore the master key from a backup file in order to access previously encrypted data.</string>
+    <string name="oi_distribution_safe_not_available">Non è disponibile nessuna applicazione compatibile per la crittografia.</string>
+    <string name="oi_distribution_safe_not_available_decrypt">Non è disponibile nessuna applicazione compatibile per la crittografia.\n\nNota: E\' necessario ripristinare la chiave master da un file di backup per accedere ai dati criptati in precedenza.</string>
     
     <!-- Dialog message: %s is the name of an application (e.g. "OI Notepad"). -->
     <string name="oi_distribution_download_market_message">Please download %s from the Market or the OpenIntents website.</string>
