@@ -19,8 +19,8 @@ package org.openintents.util;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.os.Build;
+//import android.content.pm.PackageManager.NameNotFoundException;
+//import android.os.Build;
 import android.util.Log;
 
 /**
