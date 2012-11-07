@@ -32,8 +32,8 @@ import android.content.Intent;
  *
  */
 public class AboutDialog extends DownloadAppDialog {
-	private static final String TAG = "About";
-	private static final boolean DEBUG_NO_OI_ABOUT = false;
+//	private static final String TAG = "About";
+//	private static final boolean DEBUG_NO_OI_ABOUT = false;
 	
 	public AboutDialog(Context context) {
 		super(context,
