@@ -107,7 +107,7 @@ public class EulaOrNewVersion {
 		e.commit();
 	}
 
-	private static void startForwardActivity(Activity activity, Class launchClass) {
+	private static void startForwardActivity(Activity activity, Class<?> launchClass) {
 		// Launch Eula activity
 		Intent forwardIntent = activity.getIntent();
 		

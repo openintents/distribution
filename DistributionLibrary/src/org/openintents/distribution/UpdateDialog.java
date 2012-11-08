@@ -33,7 +33,7 @@ import android.net.Uri;
  */
 public class UpdateDialog extends DownloadAppDialog {
 	
-	private static final String TAG = "UpdateMenu";
+//	private static final String TAG = "UpdateMenu";
 	private static final boolean DEBUG_NO_MARKET = false;
 	
 	/**
@@ -65,13 +65,13 @@ public class UpdateDialog extends DownloadAppDialog {
         sb.append(mMessageText);
         setMessage(sb.toString());
         
-        setButton(mContext.getText(R.string.oi_distribution_update_check_now), this);
+        setButton(BUTTON_POSITIVE, mContext.getText(R.string.oi_distribution_update_check_now), this);
     }
 
 	public void onClick(DialogInterface dialog, int which) {
 		final Intent intent  = new Intent(Intent.ACTION_VIEW);
 		
-    	if (which == BUTTON1) {
+    	if (which == BUTTON_POSITIVE) {
     		
     		// TODO: Obtain this resId properly from
     		// Manifest or about.xml

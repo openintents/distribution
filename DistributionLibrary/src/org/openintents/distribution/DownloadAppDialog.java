@@ -97,19 +97,19 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
 
         setTitle(mContext.getString(R.string.oi_distribution_download_title,
         		mDownloadAppName));
-        
-        setButton(mContext.getText(R.string.oi_distribution_download_market), this);
-    	setButton2(mContext.getText(R.string.oi_distribution_download_web), this);
-    	setButton3(mContext.getText(android.R.string.cancel), this);
+
+		setButton(BUTTON_POSITIVE, mContext.getText(R.string.oi_distribution_download_market), this);
+		setButton(BUTTON_NEGATIVE, mContext.getText(R.string.oi_distribution_download_web), this);
+		setButton(BUTTON_NEUTRAL, mContext.getText(android.R.string.cancel), this);
 	}
     
 	public void onClick(DialogInterface dialog, int which) {
 		Intent intent;
 		
-		if (which == BUTTON1) {
+		if (which == BUTTON_POSITIVE) {
 			intent = MarketUtils.getMarketDownloadIntent(mDownloadPackageName);
 			startSaveActivity(intent);
-    	} else if (which == BUTTON2) {
+    	} else if (which == BUTTON_NEGATIVE) {
     		intent  = new Intent(Intent.ACTION_VIEW);
     		Uri uri= Uri.parse(mDownloadWebsite);
 			intent.setData(uri);

@@ -9,6 +9,8 @@
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
   John Andre https://launchpad.net/~john-andre
+  Maarten de Vries https://launchpad.net/~maarten-k-de-vries
+  Marco Brohet https://launchpad.net/~therbom
   Mark van Kuijk https://launchpad.net/~markvankuyk
   Menno Vogel https://launchpad.net/~mennovogel90
   OpenIntents devs https://launchpad.net/~openintents-devs
@@ -51,7 +53,7 @@
     <string name="oi_distribution_menu_update">Controleer updates</string>
 	<string name="oi_distribution_update_box_text">Controleer handmatig op updates of installeer OI Update voor automatische meldingen.</string>
 	<string name="oi_distribution_update_check_now">Nu controleren</string>
-	<string name="oi_distribution_update_get_updater">Get OI Updater</string>
+	<string name="oi_distribution_update_get_updater">OI Updater ophalen</string>
 	<string name="oi_distribution_update_error">Het downloaden van de applicatie is niet beschikbaar</string>
 	
     <!-- Name of the application "OI Update". Translations of the application name should be consistent. -->
@@ -59,36 +61,36 @@
     
     <!-- About -->
     <!-- Menu command to open the "about" or "info" dialog. -->
-    <string name="oi_distribution_about">About</string>
+    <string name="oi_distribution_about">Over</string>
     <!-- %s is the version number (e.g. "1.2.1") -->
 	<string name="oi_distribution_aboutapp_not_available">Het bijbehorende uitbreidingsscherm is niet beschikbaar (contact, credits,licentie)</string>
     
     
     <!-- Button text: Get the application "OI About". Translations of the application name should be consistent. -->
-    <string name="oi_distribution_aboutapp_get">Get OI About</string>
+    <string name="oi_distribution_aboutapp_get">OI-informatie (Over) ophalen</string>
     
     <!-- Name of the application "OI About". Translations of the application name should be consistent. -->
-    <string name="oi_distribution_aboutapp">OI About</string>
+    <string name="oi_distribution_aboutapp">Over OI</string>
     
     <!-- Name of the application "Barcode OI Plugin". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_barcodescanner">Barcode OI Plugin</string>
     <!-- Dialog message. -->
-    <string name="oi_distribution_barcodescanner_not_available">No compatible barcode scanner is available.</string>
+    <string name="oi_distribution_barcodescanner_not_available">Geen compatibele codescanner beschikbaar</string>
     
     <!-- Name of the application "OI File Manager". Translations of the application name should be consistent.  -->
-    <string name="oi_distribution_filemanager">OI File Manager</string>
+    <string name="oi_distribution_filemanager">OI Bestandsbeheer</string>
     <!-- Dialog message. -->
     <string name="oi_distribution_filemanager_not_available">Het bestandsbeheer is niet beschikbaar</string>
     
     <!-- Safe -->
     <!-- Name of the application "OI Safe". Translations of the application name should be consistent.  -->
-    <string name="oi_distribution_safe">OI Safe</string>
+    <string name="oi_distribution_safe">OI Kluis</string>
     <!-- Dialog message. -->
     <string name="oi_distribution_safe_not_available">De applicatie voor de encryptie is niet beschikbaar</string>
-    <string name="oi_distribution_safe_not_available_decrypt">No compatible application for decryption is available.\n\nNote: You have to restore the master key from a backup file in order to access previously encrypted data.</string>
+    <string name="oi_distribution_safe_not_available_decrypt">Geen compatibele applicatie beschikbaar voor decryptie.\n\nNoot: Je moet de master key herstellen uit een back-up om eerder gecodeerde gegevens te openen.</string>
     
     <!-- Dialog message: %s is the name of an application (e.g. "OI Notepad"). -->
-    <string name="oi_distribution_download_market_message">Please download %s from the Market or the OpenIntents website.</string>
+    <string name="oi_distribution_download_market_message">Download %s van de Market op de OpenIntents-website.</string>
     <!-- Dialog message: %s is the name of an application (e.g. "OI Notepad"). -->
     <string name="oi_distribution_download_message">Download %s van de OpenIntents website</string>
     <!-- Dialog button: download the suggested application from Android Market. -->
@@ -96,18 +98,18 @@
     <!-- Dialog button: download the suggested application from the developer web site. -->
     <string name="oi_distribution_download_web">Download van het web</string>
 	<!-- Dialog title: %s is the name of an application (e.g. "OI Notepad"). -->
-    <string name="oi_distribution_download_title">Download %s</string>
+    <string name="oi_distribution_download_title">%s Downloaden</string>
 	
 	<!-- %s is an application name (e.g. "OI About can be used with the following applications:") -->
-	<string name="oi_distribution_info_activity_text">%s can be used with the following applications:</string>
+	<string name="oi_distribution_info_activity_text">%s kan gebruikt worden met de volgende applicaties</string>
 	<!-- %s is an application name (e.g. "Launch OI Notepad") -->
-    <string name="oi_distribution_info_launch">Launch %s</string>
+    <string name="oi_distribution_info_launch">%s starten</string>
     <!-- %1$s is the current application name. %2$s is another application name, and %3$s is the other application\'s version name
     (e.g. "OI About requires OI Notepad 1.2.0 or higher.") -->
-	<string name="oi_distribution_info_not_available">%1$s requires %2$s %3$s or higher.</string>
+	<string name="oi_distribution_info_not_available">%1$s vereist %2$s %3$s of hoger.</string>
 	<!-- Title of a dialog. -->
-	<string name="oi_distribution_info_instructions">Instructions</string>
+	<string name="oi_distribution_info_instructions">Aanwijzingen</string>
 	<!-- Error message -->
-	<string name="oi_distribution_launch_error">Application could not be launched</string>
+	<string name="oi_distribution_launch_error">Kan de applicatie niet starten</string>
 	
 </resources>
