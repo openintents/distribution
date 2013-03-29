@@ -15,7 +15,7 @@ public class DistributionLibrary {
 	/** Number of menu IDs that should be reserved
 	 * for DistributionLibrary.
 	 */
-	public static final int MENU_COUNT = 2;
+	public static final int MENU_COUNT = 3;
 	public static final int DIALOG_COUNT = MENU_COUNT;
 	
 	
@@ -98,6 +98,8 @@ public class DistributionLibrary {
 			return new AboutDialog(mActivity);
 		case OFFSET_UPDATE:
 			return new UpdateDialog(mActivity);
+		case OFFSET_SUPPORT:
+			return new SupportDialog(mActivity);
 		}
 		return null;
 	}
@@ -106,6 +108,9 @@ public class DistributionLibrary {
 		switch (id - mFirstDialogId) {
 		case OFFSET_ABOUT:
 			AboutDialog.onPrepareDialog(mActivity, dialog);
+			break;
+		case OFFSET_SUPPORT:
+			SupportDialog.onPrepareDialog(mActivity, dialog);
 			break;
 		}
 	}

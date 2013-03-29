@@ -37,10 +37,10 @@ public class SupportDialog extends DownloadAppDialog {
 	
 	public SupportDialog(Context context) {
 		super(context,
-				R.string.oi_distribution_aboutapp_not_available,
-				R.string.oi_distribution_aboutapp,
-				R.string.oi_distribution_aboutapp_package,
-				R.string.oi_distribution_aboutapp_website);
+				R.string.oi_distribution_supportapp_not_available,
+				R.string.oi_distribution_supportapp,
+				R.string.oi_distribution_supportapp_package,
+				R.string.oi_distribution_supportapp_website);
 
 		String version = VersionUtils.getVersionNumber(mContext);
         String appname = VersionUtils.getApplicationName(mContext);
