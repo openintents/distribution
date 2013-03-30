@@ -4,16 +4,18 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class DistributionLibrary {
 
 	public static final int OFFSET_ABOUT = 0;
 	public static final int OFFSET_UPDATE = 1;
+	public static final int OFFSET_SUPPORT = 2;
 	
 	/** Number of menu IDs that should be reserved
 	 * for DistributionLibrary.
 	 */
-	public static final int MENU_COUNT = 2;
+	public static final int MENU_COUNT = 3;
 	public static final int DIALOG_COUNT = MENU_COUNT;
 	
 	
@@ -58,6 +60,7 @@ public class DistributionLibrary {
 		// Remove items first so that they don't appear twice:
 		menu.removeItem(mFirstMenuId + OFFSET_UPDATE);
 		menu.removeItem(mFirstMenuId + OFFSET_ABOUT);
+		menu.removeItem(mFirstMenuId + OFFSET_SUPPORT);
 		
 		if (UpdateDialog.isUpdateMenuNecessary(mActivity)) {
 			menu.add(0, mFirstMenuId + OFFSET_UPDATE, 0, R.string.oi_distribution_menu_update).setIcon(
@@ -65,6 +68,10 @@ public class DistributionLibrary {
 		}
 		menu.add(0, mFirstMenuId + OFFSET_ABOUT, 0, R.string.oi_distribution_about).setIcon(
  				android.R.drawable.ic_menu_info_details).setShortcut('0', 'a');
+
+		menu.add(0, mFirstMenuId + OFFSET_SUPPORT, 0, "Support").setIcon(
+ 				android.R.drawable.ic_menu_info_details).setShortcut('0', 'a');
+
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -77,6 +84,10 @@ public class DistributionLibrary {
 			AboutDialog.showDialogOrStartActivity(mActivity, 
 					mFirstDialogId + OFFSET_ABOUT);
 			return true;
+		case OFFSET_SUPPORT:
+			SupportDialog.showDialogOrStartActivity(mActivity, 
+					mFirstDialogId + OFFSET_SUPPORT);
+			return true;
 		}
 		return false;
 	}
@@ -87,6 +98,8 @@ public class DistributionLibrary {
 			return new AboutDialog(mActivity);
 		case OFFSET_UPDATE:
 			return new UpdateDialog(mActivity);
+		case OFFSET_SUPPORT:
+			return new SupportDialog(mActivity);
 		}
 		return null;
 	}
@@ -95,6 +108,9 @@ public class DistributionLibrary {
 		switch (id - mFirstDialogId) {
 		case OFFSET_ABOUT:
 			AboutDialog.onPrepareDialog(mActivity, dialog);
+			break;
+		case OFFSET_SUPPORT:
+			SupportDialog.onPrepareDialog(mActivity, dialog);
 			break;
 		}
 	}

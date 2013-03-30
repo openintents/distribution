@@ -58,12 +58,18 @@
     <!-- %s is the version number (e.g. "1.2.1") -->
 	<string name="oi_distribution_aboutapp_not_available">No compatible extension available to display full info (contact, credits, license).</string>
     
-    
     <!-- Button text: Get the application "OI About". Translations of the application name should be consistent. -->
     <string name="oi_distribution_aboutapp_get">Get OI About</string>
     
     <!-- Name of the application "OI About". Translations of the application name should be consistent. -->
     <string name="oi_distribution_aboutapp">OI About</string>
+    
+   	<!-- Support -->
+    <string name="oi_distribution_supportapp_not_available">No compatible extension available to display full info (Help/FAQ, Contact Developers, Feature request, Donations).</string>
+    <string name="oi_distribution_supportapp_get">Get OI Support</string>
+	<string name="oi_distribution_supportapp">OI Support</string>
+    <string name="oi_distribution_support">Support</string>
+    
     
     <!-- Name of the application "Barcode OI Plugin". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_barcodescanner">Barcode OI Plugin</string>
