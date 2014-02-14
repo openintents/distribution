@@ -18,7 +18,7 @@
 	<!-- ***************************
 	     About information
 	     *************************** -->
-	<string name="about_copyright">Copyright © 2008-2011 OpenIntents</string> 
+	<string name="about_copyright">Copyright © 2008–2013 OpenIntents</string> 
 	<string name="about_website_url">http://www.openintents.org</string>
 	<string name="about_email">support@openintents.org</string>
 	

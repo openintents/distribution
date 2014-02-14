@@ -24,6 +24,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
+import android.text.method.HideReturnsTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -43,6 +44,8 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
     String mMessageText;
     
     boolean mMarketAvailable;
+
+	private boolean mHideMarketLink;
     
     public DownloadAppDialog(Context context) {
         super(context);
@@ -77,11 +80,12 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
         mDownloadWebsite = download_website;
         
         mMarketAvailable = MarketUtils.isMarketAvailable(mContext, mDownloadPackageName);
+        mHideMarketLink = MarketUtils.hideMarketLink(mContext);
         
         StringBuilder sb = new StringBuilder();
         sb.append(message);
         sb.append(" ");
-        if (mMarketAvailable) {
+        if (mMarketAvailable && !mHideMarketLink) {
         	sb.append(mContext.getString(R.string.oi_distribution_download_market_message, 
         			mDownloadAppName));
         } else {
@@ -116,7 +120,7 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
 	public static void onPrepareDialog(Context context, Dialog dialog) {
 		DownloadAppDialog d = (DownloadAppDialog) dialog;
 		
-		boolean has_android_market = MarketUtils.isMarketAvailable(context, d.mDownloadPackageName);
+		boolean has_android_market = MarketUtils.isMarketAvailable(context, d.mDownloadPackageName) && !d.mHideMarketLink;
 
 		dialog.findViewById(android.R.id.button1).setVisibility(
 				has_android_market ? View.VISIBLE : View.GONE);
