@@ -328,7 +328,7 @@
 		
 		<!-- Copy common ant script and README -->
 		<copy-source source="${build.common.dir}" />
-		<copy-source-file source="${source.base.dir}/README.txt" />
+		<copy-source-file source="${source.base.dir}/readme.txt" />
 		
 		<!-- Copy referenced Android Library Projects
 		    (currently at most 5) -->
