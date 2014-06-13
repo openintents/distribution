@@ -1,19 +1,19 @@
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
+import android.app.Activity;
 import android.app.Dialog;
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DistributionLibraryListActivity extends ListActivity {
+public class DistributionLibraryActivity extends Activity {
 
-	protected static final int MENU_DISTRIBUTION_START = Menu.FIRST;
+	static final int MENU_DISTRIBUTION_START = Menu.FIRST;
 	
-	protected static final int DIALOG_DISTRIBUTION_START = 1;
+	static final int DIALOG_DISTRIBUTION_START = 1;
 
 	protected DistributionLibrary mDistribution;
-
+	
     /** Called when the activity is first created. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

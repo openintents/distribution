@@ -14,16 +14,14 @@
  * limitations under the License.
  */
 
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import org.openintents.distribution.R;
-
-import org.openintents.openintents.util.VersionUtils;
+import org.openintents.util.VersionUtils;
 
 import android.app.Activity;
 import android.content.Intent;

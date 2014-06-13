@@ -1,8 +1,6 @@
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
 import android.content.Context;
-
-import org.openintents.distribution.R;
 
 public class DownloadOIAppDialog extends DownloadAppDialog {
 

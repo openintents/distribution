@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
-import org.openintents.distribution.R;
-
-import org.openintents.openintents.intents.AboutMiniIntents;
-import org.openintents.openintents.util.IntentUtils;
-import org.openintents.openintents.util.VersionUtils;
+import org.openintents.intents.AboutMiniIntents;
+import org.openintents.util.IntentUtils;
+import org.openintents.util.VersionUtils;
 
 import android.app.Activity;
 import android.content.Context;

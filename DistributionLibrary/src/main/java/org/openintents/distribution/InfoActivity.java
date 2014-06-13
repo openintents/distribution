@@ -1,8 +1,6 @@
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
-import org.openintents.distribution.R;
-
-import org.openintents.openintents.util.VersionUtils;
+import org.openintents.util.VersionUtils;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

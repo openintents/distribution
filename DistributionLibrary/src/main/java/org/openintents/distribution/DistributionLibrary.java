@@ -1,11 +1,9 @@
-package org.openintents.openintents.distribution;
+package org.openintents.distribution;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import org.openintents.distribution.R;
 
 public class DistributionLibrary {
 

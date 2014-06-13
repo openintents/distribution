@@ -11,7 +11,7 @@
     <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="15"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <application android:label="@string/oi_distribution_app_name">
-        <activity android:name="org.openintents.openintents.distribution.EulaActivity"
+        <activity android:name=".EulaActivity"
               android:label="@string/oi_distribution_eula_title">
         </activity>
     </application>

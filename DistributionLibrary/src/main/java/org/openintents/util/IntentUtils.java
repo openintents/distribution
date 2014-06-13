@@ -4,7 +4,7 @@
  * Original method retrieved from:
  * http://android-developers.blogspot.com/2009/01/can-i-use-this-intent.html
  */
-package org.openintents.openintents.util;
+package org.openintents.util;
 
 import java.util.List;
 

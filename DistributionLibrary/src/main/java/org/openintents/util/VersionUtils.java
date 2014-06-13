@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openintents.openintents.util;
+package org.openintents.util;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

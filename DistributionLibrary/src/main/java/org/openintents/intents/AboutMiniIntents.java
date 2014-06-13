@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openintents.openintents.intents;
+package org.openintents.intents;
 
 /**
  * Intents definition belonging to OI About.
