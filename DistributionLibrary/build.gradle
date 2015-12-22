@@ -13,14 +13,13 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.openintents.distribution"
         minSdkVersion 4
         targetSdkVersion 15
     }
 
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
