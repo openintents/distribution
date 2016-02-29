@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
+import android.os.Bundle;
 
 /**
  * @author Peli
@@ -33,9 +34,13 @@ public class MarketUtils {
 
 	public static boolean hideMarketLink(Context context) {
 		try {
-			return context.getPackageManager().getApplicationInfo(context.getApplicationInfo().packageName, PackageManager.GET_META_DATA).metaData.getBoolean("hideMarketLink");
+			Bundle metaData = context.getPackageManager().getApplicationInfo(context.getApplicationInfo().packageName, PackageManager.GET_META_DATA).metaData;
+			if (metaData != null) {
+				return metaData.getBoolean("hideMarketLink");
+			} else {
+				return false;
+			}
 		} catch (NameNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		return false;

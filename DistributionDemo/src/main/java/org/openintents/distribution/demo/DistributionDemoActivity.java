@@ -15,9 +15,7 @@ import android.view.View;
 // Extend your activity from DistributionLibraryActivity
 // or from DistributionLibraryListActivity.
 public class DistributionDemoActivity extends DistributionLibraryActivity {
-	
-	private static final String TAG = "DistribtionDemo";
-	
+
 	private static final int MENU_DISTRIBUTION_START = Menu.FIRST + 100; // MUST BE LAST
 
 	public static final int DIALOG_NO_FILE_MANAGER_AVAILABLE = 1;

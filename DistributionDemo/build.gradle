@@ -1,0 +1,22 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        versionCode 4
+        versionName '1.0'
+        minSdkVersion 4
+        targetSdkVersion 23
+        applicationId 'org.openintents.distribution.demo'
+    }
+}
+
+dependencies {
+    compile project(':DistributionLibrary')
+}

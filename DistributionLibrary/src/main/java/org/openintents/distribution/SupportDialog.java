@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2007-2011 OpenIntents.org
+ * Copyright (C) 2007-2016 OpenIntents.org
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,36 +21,44 @@ import org.openintents.util.IntentUtils;
 import org.openintents.util.VersionUtils;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.util.Linkify;
+import android.util.Log;
+import android.widget.Toast;
 
 /**
- * About dialog
- *
- * @version 2009-02-04
- * @author Peli
- *
+ * Support dialog
  */
-public class SupportDialog extends DownloadAppDialog {
-//	private static final String TAG = "About";
-//	private static final boolean DEBUG_NO_OI_ABOUT = false;
-	
-	public SupportDialog(Context context) {
-		super(context,
-				R.string.oi_distribution_supportapp_not_available,
-				R.string.oi_distribution_supportapp,
-				R.string.oi_distribution_supportapp_package,
-				R.string.oi_distribution_supportapp_website);
+public class SupportDialog extends AlertDialog implements DialogInterface.OnClickListener {
 
-		String version = VersionUtils.getVersionNumber(mContext);
-        String appname = VersionUtils.getApplicationName(mContext);
-        String appnameversion = mContext.getString(R.string.oi_distribution_name_and_version, appname, version);
+    private static final String TAG = SupportDialog.class.getName();
+    private final Context mContext;
+    private final String mSupportUrl;
+
+    public SupportDialog(Context context) {
+		super(context);
+        mContext = context;
+        mSupportUrl = context.getString(R.string.oi_support_page);
+		String version = VersionUtils.getVersionNumber(context);
+        String appName = VersionUtils.getApplicationName(context);
+        String appNameVersion = context.getString(R.string.oi_distribution_name_and_version, appName, version);
         
-        StringBuilder sb = new StringBuilder();
-        sb.append(appnameversion);
+        SpannableStringBuilder sb = new SpannableStringBuilder();
+        sb.append(appNameVersion);
         sb.append("\n\n");
-        sb.append(mMessageText);
-        setMessage(sb.toString());
+        sb.append(context.getString(R.string.oi_visit_oi_support_page));
+        setMessage(sb);
+		setTitle(R.string.oi_support_dialog_title);
+        setButton(BUTTON_POSITIVE, context.getString(R.string.oi_open_page), this);
+        setButton(BUTTON_NEGATIVE, context.getString(R.string.oi_not_now), this);
 	}
 	
 	public static void showDialogOrStartActivity(Activity activity, int dialogId) {
@@ -64,4 +72,22 @@ public class SupportDialog extends DownloadAppDialog {
 		}
 	}
 
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+            Intent intent;
+
+            if (which == BUTTON_POSITIVE) {
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mSupportUrl));
+                try {
+                    mContext.startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(mContext,
+                            R.string.oi_distribution_update_error,
+                            Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "Error starting second activity.", e);
+                }
+            } else if (which == BUTTON_NEGATIVE) {
+               dialog.dismiss();
+            }
+    }
 }

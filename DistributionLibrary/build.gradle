@@ -2,10 +2,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 group = 'org.openintents'
-version = '1.0.3'
+version = '1.1'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     lintOptions {
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         versionCode 4
         minSdkVersion 4
-        targetSdkVersion 19
+        targetSdkVersion 23
     }
 
     buildTypes {

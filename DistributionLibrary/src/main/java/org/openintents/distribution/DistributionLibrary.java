@@ -108,9 +108,6 @@ public class DistributionLibrary {
 		case OFFSET_ABOUT:
 			AboutDialog.onPrepareDialog(mActivity, dialog);
 			break;
-		case OFFSET_SUPPORT:
-			SupportDialog.onPrepareDialog(mActivity, dialog);
-			break;
 		}
 	}
 }

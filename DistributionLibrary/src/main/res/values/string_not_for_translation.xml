@@ -53,6 +53,7 @@
 	<!-- Support -->
     <string name="oi_distribution_supportapp_package">org.openintents.support</string>
     <string name="oi_distribution_supportapp_website">http://www.openintents.org/en/node/202</string><!-- 202 = OI Support -->
+    <string name="oi_support_page">http://www.openintents.org/contribute</string>
 	
     <!-- Barcode plugin -->
     <string name="oi_distribution_barcodescanner_package">org.openintents.barcodescanner</string>

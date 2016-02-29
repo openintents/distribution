@@ -69,7 +69,10 @@
     <string name="oi_distribution_supportapp_get">Get OI Support</string>
 	<string name="oi_distribution_supportapp">OI Support</string>
     <string name="oi_distribution_support">Support</string>
-    
+    <string name="oi_visit_oi_support_page">Please also visit OI support page http://openintents.org/contribute to make a contribution to the development effort!</string>
+    <string name="oi_support_dialog_title">Support the developers</string>
+    <string name="oi_open_page">Open page</string>
+    <string name="oi_not_now">Not now</string>
     
     <!-- Name of the application "Barcode OI Plugin". Translations of the application name should be consistent.  -->
     <string name="oi_distribution_barcodescanner">Barcode OI Plugin</string>
@@ -110,5 +113,6 @@
 	<string name="oi_distribution_info_instructions">Instructions</string>
 	<!-- Error message -->
 	<string name="oi_distribution_launch_error">Application could not be launched</string>
+
 	
 </resources>
