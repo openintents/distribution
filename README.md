@@ -11,6 +11,6 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.jitpack:gradle-simple:1.0'
+    compile 'com.github.openintents:distribution:{latest version}'
 }
 ```
