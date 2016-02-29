@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'org.openintents'
-version = '1.1'
+version = '1.1.2'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '23.0.2'
 
     lintOptions {
         abortOnError false
@@ -30,6 +30,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri("../../repo"))
+            pom.artifactId = 'distribution-lib'
         }
     }
 }
