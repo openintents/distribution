@@ -30,7 +30,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri("../../repo"))
-            pom.artifactId = 'distribution-lib'
+            pom.artifactId = 'distribution'
         }
     }
 }
