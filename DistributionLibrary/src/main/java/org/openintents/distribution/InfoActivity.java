@@ -211,14 +211,14 @@ public class InfoActivity extends DistributionLibraryListActivity implements OnI
 	}
 
 	private AlertDialog buildGetFromMarketDialog(int pos) {
-		String this_appname = VersionUtils.getApplicationName(this);
-		String info_not_available = getString(R.string.oi_distribution_info_not_available, 
-				this_appname, mApplicationStrings[pos], mMinVersionName[pos]);
-		String download_appname = getString(mApplications[pos]);
+		String thisAppname = VersionUtils.getApplicationName(this);
+		String infoNotAvailable = getString(R.string.oi_distribution_info_not_available, 
+				thisAppname, mApplicationStrings[pos], mMinVersionName[pos]);
+		String downloadAppname = getString(mApplications[pos]);
 		
 		return new DownloadAppDialog(this, 
-				info_not_available, 
-				download_appname, 
+				infoNotAvailable, 
+				downloadAppname, 
 				mPackageNames[pos], 
 				mDeveloperUris[pos]);
 	}

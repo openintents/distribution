@@ -87,6 +87,8 @@ public class DistributionLibrary {
 			SupportDialog.showDialogOrStartActivity(mActivity, 
 					mFirstDialogId + OFFSET_SUPPORT);
 			return true;
+		default:
+			break;
 		}
 		return false;
 	}
@@ -99,6 +101,8 @@ public class DistributionLibrary {
 			return new UpdateDialog(mActivity);
 		case OFFSET_SUPPORT:
 			return new SupportDialog(mActivity);
+		default:
+			break;
 		}
 		return null;
 	}

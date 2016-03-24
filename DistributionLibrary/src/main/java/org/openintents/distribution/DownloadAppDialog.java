@@ -51,32 +51,32 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
         mContext = context;
     }
     
-    public DownloadAppDialog(Context context, int message_id, int download_name_id, int download_package_id, int download_website_id) {
+    public DownloadAppDialog(Context context, int messageId, int downloadNameId, int downloadPackageId, int downloadWebsiteId) {
         super(context);
         mContext = context;
-        set(message_id, download_name_id, download_package_id, download_website_id);
+        set(messageId, downloadNameId, downloadPackageId, downloadWebsiteId);
     }
     
-    public DownloadAppDialog(Context context, String message, String download_name, String download_package, String download_website) {
+    public DownloadAppDialog(Context context, String message, String downloadName, String downloadPackage, String downloadWebsite) {
         super(context);
         mContext = context;
-        set(message, download_name, download_package, download_website);
+        set(message, downloadName, downloadPackage, downloadWebsite);
     }
 
-	protected void set(int message_id, int download_name_id,
-			int download_package_id, int download_website_id) {
-		String message = mContext.getString(message_id);
-		String download_name = mContext.getString(download_name_id);
-		String download_package = mContext.getString(download_package_id);
-		String download_website = mContext.getString(download_website_id);
-		set(message, download_name, download_package, download_website);
+	protected void set(int messageId, int downloadNameId,
+			int downloadPackageId, int downloadWebsiteId) {
+		String message = mContext.getString(messageId);
+		String downloadName = mContext.getString(downloadNameId);
+		String downloadPackage = mContext.getString(downloadPackageId);
+		String downloadWebsite = mContext.getString(downloadWebsiteId);
+		set(message, downloadName, downloadPackage, downloadWebsite);
 	}
 	
-	protected void set(String message, String download_name,
-			String download_package, String download_website) {
-        mDownloadAppName = download_name;
-        mDownloadPackageName = download_package;
-        mDownloadWebsite = download_website;
+	protected void set(String message, String downloadName,
+			String downloadPackage, String downloadWebsite) {
+        mDownloadAppName = downloadName;
+        mDownloadPackageName = downloadPackage;
+        mDownloadWebsite = downloadWebsite;
         
         mMarketAvailable = org.openintents.distribution.MarketUtils.isMarketAvailable(mContext, mDownloadPackageName);
         mHideMarketLink = org.openintents.distribution.MarketUtils.hideMarketLink(mContext);
@@ -119,10 +119,10 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
 	public static void onPrepareDialog(Context context, Dialog dialog) {
 		DownloadAppDialog d = (DownloadAppDialog) dialog;
 		
-		boolean has_android_market = org.openintents.distribution.MarketUtils.isMarketAvailable(context, d.mDownloadPackageName) && !d.mHideMarketLink;
+		boolean hasAndroidMarket = org.openintents.distribution.MarketUtils.isMarketAvailable(context, d.mDownloadPackageName) && !d.mHideMarketLink;
 
 		dialog.findViewById(android.R.id.button1).setVisibility(
-				has_android_market ? View.VISIBLE : View.GONE);
+				hasAndroidMarket ? View.VISIBLE : View.GONE);
 	}
 	
 	/**
