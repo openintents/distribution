@@ -30,6 +30,8 @@ public class DownloadOIAppDialog extends DownloadAppDialog {
 			R.string.oi_distribution_safe_package,
 			R.string.oi_distribution_safe_website);
 			break;
+		default:
+			break;
 		}
 	}
 }
