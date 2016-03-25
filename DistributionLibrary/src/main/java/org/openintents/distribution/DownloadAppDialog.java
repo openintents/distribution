@@ -82,8 +82,7 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
         mHideMarketLink = org.openintents.distribution.MarketUtils.hideMarketLink(mContext);
         
         StringBuilder sb = new StringBuilder();
-        sb.append(message);
-        sb.append(" ");
+        sb.append(message).append(" ");
         if (mMarketAvailable && !mHideMarketLink) {
         	sb.append(mContext.getString(R.string.oi_distribution_download_market_message, 
         			mDownloadAppName));

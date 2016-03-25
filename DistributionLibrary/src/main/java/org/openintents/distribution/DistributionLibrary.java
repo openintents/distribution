@@ -19,8 +19,8 @@ public class DistributionLibrary {
 	
 	
 	Activity mActivity;
-	int mFirstMenuId = 0;
-	int mFirstDialogId = 0;
+	int mFirstMenuId;
+	int mFirstDialogId;
 	
 	public DistributionLibrary(Activity activity, int firstMenuId, int firstDialogId) {
 		mActivity = activity;
