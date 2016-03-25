@@ -38,6 +38,6 @@ public class IntentUtils {
 	    List<ResolveInfo> list =
 	            packageManager.queryIntentActivities(intent,
 	                    PackageManager.MATCH_DEFAULT_ONLY);
-	    return list.size() > 0;
+	    return !list.isEmpty();
 	}
 }

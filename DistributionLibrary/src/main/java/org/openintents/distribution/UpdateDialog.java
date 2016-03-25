@@ -16,14 +16,13 @@
 
 package org.openintents.distribution;
 
-import org.openintents.util.VersionUtils;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
+import org.openintents.util.VersionUtils;
 
 /**
  * @version 2009-10-23: support Market and aTrackDog
@@ -60,10 +59,8 @@ public class UpdateDialog extends DownloadAppDialog {
         String appnameversion = mContext.getString(R.string.oi_distribution_name_and_version, appname, version);
         
         StringBuilder sb = new StringBuilder();
-        sb.append(appnameversion);
-        sb.append("\n\n");
-        sb.append(mMessageText);
-        setMessage(sb.toString());
+		sb.append(appnameversion).append("\n\n").append(mMessageText);
+		setMessage(sb.toString());
         
         setButton(BUTTON_POSITIVE, mContext.getText(R.string.oi_distribution_update_check_now), this);
     }
@@ -93,7 +90,7 @@ public class UpdateDialog extends DownloadAppDialog {
 	 * @return
 	 */
 	public static boolean isUpdateMenuNecessary(Context context) {
-		PackageInfo pi = null;
+		PackageInfo pi;
 		
 		// Test for existence of all known update checker applications.
 		for (int i = 0; i < UPDATE_CHECKER.length; i++) {

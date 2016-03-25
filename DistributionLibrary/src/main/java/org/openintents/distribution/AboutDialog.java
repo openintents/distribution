@@ -19,7 +19,6 @@ package org.openintents.distribution;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-
 import org.openintents.intents.AboutMiniIntents;
 import org.openintents.util.IntentUtils;
 import org.openintents.util.VersionUtils;
@@ -46,11 +45,8 @@ public class AboutDialog extends DownloadAppDialog {
         String appname = VersionUtils.getApplicationName(mContext);
         String appnameversion = mContext.getString(R.string.oi_distribution_name_and_version, appname, version);
         
-        StringBuilder sb = new StringBuilder();
-        sb.append(appnameversion);
-        sb.append("\n\n");
-        sb.append(mMessageText);
-        setMessage(sb.toString());
+        StringBuilder sb = new StringBuilder();sb.append(appnameversion).append("\n\n").append(mMessageText);
+		setMessage(sb.toString());
 	}
 	
 	public static void showDialogOrStartActivity(Activity activity, int dialogId) {

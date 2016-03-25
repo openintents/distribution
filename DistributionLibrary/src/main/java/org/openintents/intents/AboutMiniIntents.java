@@ -26,13 +26,6 @@ package org.openintents.intents;
  *
  */
 public final class AboutMiniIntents {
-	
-	/**
-	 * Empty, preventing instantiation.
-	 */
-	private AboutMiniIntents() {
-		//Empty, preventing instantiation.
-	}
 
 	/**
 	 * Activity Action: Show an about dialog to display
@@ -71,5 +64,12 @@ public final class AboutMiniIntents {
 	 */
 	public static final String EXTRA_PACKAGE_NAME = 
 		"org.openintents.extra.PACKAGE_NAME";
-	
+
+	/**
+	 * Empty, preventing instantiation.
+	 */
+	private AboutMiniIntents() {
+		//Empty, preventing instantiation.
+	}
+
 }
