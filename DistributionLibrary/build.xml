@@ -28,6 +28,14 @@
 	<!-- Root directory of all OpenIntents files. -->
 	<property name="source.base" value="../.." />
 
+	<!-- For compatibility to gradle -->
+	<property name="source.dir" value="src/main/java" />
+	<property name="source.absolute.dir" location="${source.dir}" />
+	<property name="resource.absolute.dir" location="src/main/res" />
+	<!-- 2 lines blew does not work, copy AndroidManifest way makes sense -->
+	<property name="manifest.file" value="src/main/AndroidManifest.xml" />
+	<property name="manifest.abs.file" location="${manifest.file}" />
+
 	<!-- Path for common ant script. -->
     <property name="build.common.dir" value="${source.base}/distribution/ant" />
 
