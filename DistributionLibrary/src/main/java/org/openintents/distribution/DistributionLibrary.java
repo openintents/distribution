@@ -9,7 +9,8 @@ public class DistributionLibrary {
 
     public static final int OFFSET_ABOUT = 0;
     public static final int OFFSET_UPDATE = 1;
-    public static final int OFFSET_PRIVACY = 2;
+    public static final int OFFSET_SUPPORT = 2;
+    public static final int OFFSET_PRIVACY = 3;
 
     /**
      * Number of menu IDs that should be reserved
@@ -59,6 +60,7 @@ public class DistributionLibrary {
         // Remove items first so that they don't appear twice:
         menu.removeItem(mFirstMenuId + OFFSET_UPDATE);
         menu.removeItem(mFirstMenuId + OFFSET_ABOUT);
+        menu.removeItem(mFirstMenuId + OFFSET_SUPPORT);
         menu.removeItem(mFirstMenuId + OFFSET_PRIVACY);
 
         if (UpdateDialog.isUpdateMenuNecessary(mActivity)) {
@@ -67,6 +69,9 @@ public class DistributionLibrary {
         }
         menu.add(0, mFirstMenuId + OFFSET_ABOUT, 0, R.string.oi_distribution_about).setIcon(
                 android.R.drawable.ic_menu_info_details).setShortcut('0', 'a');
+
+        menu.add(0, mFirstMenuId + OFFSET_SUPPORT, 0, R.string.oi_distribution_support).setIcon(
+                android.R.drawable.ic_menu_info_details).setAlphabeticShortcut('s');
 
         menu.add(0, mFirstMenuId + OFFSET_PRIVACY, 0, R.string.oi_distribution_privacy).setIcon(
                 android.R.drawable.ic_menu_info_details).setAlphabeticShortcut('p');
@@ -83,6 +88,9 @@ public class DistributionLibrary {
                 AboutDialog.showDialogOrStartActivity(mActivity,
                         mFirstDialogId + OFFSET_ABOUT);
                 return true;
+            case OFFSET_SUPPORT:
+                mActivity.showDialog(mFirstDialogId + OFFSET_SUPPORT);
+                return true;
             case OFFSET_PRIVACY:
                 mActivity.showDialog(mFirstDialogId + OFFSET_PRIVACY);
                 return true;
@@ -98,6 +106,8 @@ public class DistributionLibrary {
                 return new AboutDialog(mActivity);
             case OFFSET_UPDATE:
                 return new UpdateDialog(mActivity);
+            case OFFSET_SUPPORT:
+                return new SupportDialog(mActivity);
             case OFFSET_PRIVACY:
                 return new PrivacyDialog(mActivity);
             default:
