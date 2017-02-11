@@ -48,7 +48,9 @@
 	<string name="oi_distribution_update_check_now">Check now</string>
 	<string name="oi_distribution_update_get_updater">Get OI Updater</string>
 	<string name="oi_distribution_update_error">Download application not available.</string>
-	
+
+    <string name="oi_distribution_browser_error">Browser application not available.</string>
+
     <!-- Name of the application "OI Update". Translations of the application name should be consistent. -->
     <string name="oi_distribution_update_app">OI Update</string>
     
@@ -63,7 +65,9 @@
     
     <!-- Name of the application "OI About". Translations of the application name should be consistent. -->
     <string name="oi_distribution_aboutapp">OI About</string>
-    
+
+    <string name="oi_distribution_privacy">Privacy</string>
+
    	<!-- Support -->
     <string name="oi_distribution_supportapp_not_available">No compatible extension available to display full info (Help/FAQ, Contact Developers, Feature request, Donations).</string>
     <string name="oi_distribution_supportapp_get">Get OI Support</string>
@@ -71,6 +75,8 @@
     <string name="oi_distribution_support">Support</string>
     <string name="oi_visit_oi_support_page">Please also visit OI support page http://openintents.org/contribute to make a contribution to the development effort!</string>
     <string name="oi_support_dialog_title">Support the developers</string>
+    <string name="oi_visit_oi_privacy_page">OpenIntents does not collect personal data other than stated in our privacy policy.\nPlease also visit OI privacy page http://openintents.org/privacy-for-apps to read our privacy policy!</string>
+    <string name="oi_privacy_dialog_title">Privacy Policy</string>
     <string name="oi_open_page">Open page</string>
     <string name="oi_not_now">Not now</string>
     

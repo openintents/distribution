@@ -27,7 +27,6 @@
 			    android:text="@string/oi_distribution_eula_title"
     			android:gravity="center"
 			    android:textStyle="bold"
-			    android:textColor="#ffffffff"
 			    android:layout_marginTop="10dip"
 			    android:layout_marginBottom="10dip"
 				/><!-- 
@@ -55,7 +54,6 @@
 					android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 			    	android:textStyle="bold"
-				    android:textColor="#ffffffff"
 				    android:layout_marginLeft="10dip"
 				    android:layout_marginRight="10dip"
 				    android:layout_marginTop="10dip"
@@ -67,7 +65,6 @@
 				    android:layout_height="wrap_content" 
 				    android:autoLink="web"
 			    	android:bufferType="spannable"
-				    android:textColor="#ffffffff"
 				    android:layout_marginLeft="10dip"
 				    android:layout_marginRight="10dip"
 				    android:layout_marginTop="10dip"

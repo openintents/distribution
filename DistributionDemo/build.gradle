@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     lintOptions {
         abortOnError false
@@ -12,7 +12,7 @@ android {
         versionCode 4
         versionName '1.0'
         minSdkVersion 4
-        targetSdkVersion 23
+        targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId 'org.openintents.distribution.demo'
     }
 }
