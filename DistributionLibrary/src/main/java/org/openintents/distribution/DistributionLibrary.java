@@ -16,7 +16,7 @@ public class DistributionLibrary {
      * Number of menu IDs that should be reserved
      * for DistributionLibrary.
      */
-    public static final int MENU_COUNT = 3;
+    public static final int MENU_COUNT = 4;
     public static final int DIALOG_COUNT = MENU_COUNT;
 
 
