@@ -77,7 +77,12 @@ public class VersionUtils {
 		String name = "?";
 		try {
 			PackageInfo pi = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-			name = context.getString(pi.applicationInfo.labelRes);
+			int labelRes = pi.applicationInfo.labelRes;
+			if (labelRes != 0) {
+				name = context.getString(pi.applicationInfo.labelRes);
+			} else {
+				name = pi.applicationInfo.name;
+			}
 		} catch (PackageManager.NameNotFoundException e) {
 			Log.e(TAG, "Package name not found", e);
 		};
