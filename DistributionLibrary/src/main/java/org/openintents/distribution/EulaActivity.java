@@ -103,7 +103,7 @@ public class EulaActivity extends Activity {
 		
 		mText1.setText(title);
 		mText2.setText(message);
-		mText.setText(readTextFromRawResource(R.raw.license_short, false));
+		mText.setText(readTextFromRawResource(R.raw.oi_distribution_license_short, false));
 	}
 	
 	

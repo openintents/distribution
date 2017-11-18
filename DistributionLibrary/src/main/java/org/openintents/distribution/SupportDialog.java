@@ -40,7 +40,7 @@ public class SupportDialog extends AlertDialog implements DialogInterface.OnClic
     public SupportDialog(Context context) {
         super(context);
         mContext = context;
-        mSupportUrl = context.getString(R.string.oi_support_page);
+        mSupportUrl = context.getString(R.string.oi_distribution_support_page);
         String version = VersionUtils.getVersionNumber(context);
         String appName = VersionUtils.getApplicationName(context);
         String appNameVersion = context.getString(R.string.oi_distribution_name_and_version, appName, version);
@@ -48,11 +48,11 @@ public class SupportDialog extends AlertDialog implements DialogInterface.OnClic
         SpannableStringBuilder sb = new SpannableStringBuilder();
         sb.append(appNameVersion);
         sb.append("\n\n");
-        sb.append(context.getString(R.string.oi_visit_oi_support_page));
+        sb.append(context.getString(R.string.oi_distribution_visit_oi_support_page));
         setMessage(sb);
-        setTitle(R.string.oi_support_dialog_title);
-        setButton(BUTTON_POSITIVE, context.getString(R.string.oi_open_page), this);
-        setButton(BUTTON_NEGATIVE, context.getString(R.string.oi_not_now), this);
+        setTitle(R.string.oi_distribution_support_dialog_title);
+        setButton(BUTTON_POSITIVE, context.getString(R.string.oi_distribution_open_page), this);
+        setButton(BUTTON_NEGATIVE, context.getString(R.string.oi_distribution_not_now), this);
     }
 
     @Override

@@ -6,6 +6,6 @@
     <oi:translators oi:resource="@array/about_translators" />
     <oi:artists oi:resource="@array/about_artists" />
     <oi:website-url oi:value="@string/about_website_url" />
-    <oi:license oi:resource="@raw/license_short" />
+    <oi:license oi:resource="@raw/oi_distribution_license_short" />
     <oi:email oi:value="@string/about_email" />
 </about>

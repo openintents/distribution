@@ -51,9 +51,9 @@
     <string name="oi_distribution_aboutapp_website">http://www.openintents.org/about/</string>
 	
 	<!-- Support -->
-    <string name="oi_support_page">http://www.openintents.org/contribute</string>
+    <string name="oi_distribution_support_page">http://www.openintents.org/contribute</string>
 	<!-- Privacy -->
-    <string name="oi_privacy_page">http://www.openintents.org/privacy-for-apps</string>
+    <string name="oi_distribution_privacy_page">http://www.openintents.org/privacy-for-apps</string>
 
     <!-- Barcode plugin -->
     <string name="oi_distribution_barcodescanner_package">org.openintents.barcodescanner</string>

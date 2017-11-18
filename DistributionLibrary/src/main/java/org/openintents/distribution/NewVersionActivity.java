@@ -46,7 +46,7 @@ public class NewVersionActivity extends EulaActivity {
 		
 		mText1.setText(title);
 		mText2.setText(message);
-		mText.setText(readTextFromRawResource(R.raw.recent_changes, true));
+		mText.setText(readTextFromRawResource(R.raw.oi_distribution_recent_changes, true));
 		
 		mAgree.setText(R.string.oi_distribution_newversion_continue);
 		mDisagree.setVisibility(View.GONE);
