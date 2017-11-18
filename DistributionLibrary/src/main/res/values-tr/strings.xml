@@ -47,7 +47,7 @@
 	<!-- Update -->
 	<!-- Menu command to look for updates. -->
     <string name="oi_distribution_menu_update">Güncelleme kontrolü</string>
-	<string name="oi_distribution_update_box_text">Güncelleştirmeleri  el ile kontrol edin yada Otomatik uyarı için OIGüncellemeyi yükleyin.</string>
+	<string name="oi_distribution_update_box_text">Güncelleştirmeleri  el ile kontrol edin ya da Otomatik uyarı için OIGüncellemeyi yükleyin.</string>
 	<string name="oi_distribution_update_check_now">Şimdi kontrol et</string>
 	<string name="oi_distribution_update_get_updater">OI Güncelleyici al</string>
 	<string name="oi_distribution_update_error">İndirilebilir uygulama mevcut değil.</string>
@@ -108,7 +108,7 @@
     <string name="oi_distribution_info_launch">%s başlat</string>
     <!-- %1$s is the current application name. %2$s is another application name, and %3$s is the other application\'s version name
     (e.g. "OI About requires OI Notepad 1.2.0 or higher.") -->
-	<string name="oi_distribution_info_not_available">%1$s,%2$s %3$s yada daha yüksek bir sürümü gerektiriyor.</string>
+	<string name="oi_distribution_info_not_available">%1$s,%2$s %3$s ya da daha yüksek bir sürümü gerektiriyor.</string>
 	<!-- Title of a dialog. -->
 	<string name="oi_distribution_info_instructions">Talimatlar</string>
 	<!-- Error message -->

@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'org.openintents'
-version = '1.2.2'
+version = '2.0.0'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -24,14 +23,4 @@ android {
         }
     }
     buildToolsVersion rootProject.ext.buildToolsVersion
-}
-
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: uri("../../repo"))
-            pom.artifactId = 'distribution'
-        }
-    }
 }

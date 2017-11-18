@@ -50,7 +50,7 @@
 	<!-- Update -->
 	<!-- Menu command to look for updates. -->
     <string name="oi_distribution_menu_update">Auf Updates prüfen</string>
-	<string name="oi_distribution_update_box_text">Suchen Sie manuell nach Updates oder oder installieren Sie für eine automatische Benachrichtigung OI Update.</string>
+	<string name="oi_distribution_update_box_text">Suchen Sie manuell nach Updates oder installieren Sie für eine automatische Benachrichtigung OI Update.</string>
 	<string name="oi_distribution_update_check_now">Jetzt überprüfen</string>
 	<string name="oi_distribution_update_get_updater">OI Updater Herunterladen</string>
 	<string name="oi_distribution_update_error">Keine Anwendung zum Herunterladen vorhanden.</string>

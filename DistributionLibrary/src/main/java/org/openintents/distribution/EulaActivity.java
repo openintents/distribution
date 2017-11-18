@@ -71,24 +71,24 @@ public class EulaActivity extends Activity {
 		mLaunchIntent = b.getParcelable(EulaOrNewVersion.EXTRA_LAUNCH_ACTIVITY_INTENT);
 		
 		//mIntroContinue = (Button) findViewById(R.id.intro_continue);
-		mAgree = (Button) findViewById(R.id.button1);
+		mAgree = findViewById(R.id.button1);
 		mAgree.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				accept();
 			}
 		});
 		
-		mDisagree = (Button) findViewById(R.id.button2);
+		mDisagree = findViewById(R.id.button2);
 		mDisagree.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				refuse();
 			}
 		});
 
-		mText1 = (TextView) findViewById(R.id.text1);
-		mText2 = (TextView) findViewById(R.id.text2);
-		mText = (TextView) findViewById(R.id.text);
-		mImage = (ImageView) findViewById(R.id.imageview);
+		mText1 = findViewById(R.id.text1);
+		mText2 = findViewById(R.id.text2);
+		mText = findViewById(R.id.text);
+		mImage = findViewById(R.id.app_icon_view);
 		
 		mAppName = VersionUtils.getApplicationName(this);
 		int iconRes = VersionUtils.getApplicationIcon(this);

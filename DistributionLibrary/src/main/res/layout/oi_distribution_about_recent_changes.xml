@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="8dp"
@@ -9,6 +10,8 @@
     <TextView
         android:id="@+id/et_recent_changes"
         style="@style/all_content"
-        android:paddingLeft="0dp" />
+        android:paddingLeft="0dp"
+        android:paddingStart="0dp"
+        tools:ignore="RtlSymmetry"/>
 
 </ScrollView>

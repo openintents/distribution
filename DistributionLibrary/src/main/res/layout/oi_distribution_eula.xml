@@ -15,62 +15,75 @@
  * limitations under the License.
  -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
     >
-    	<TextView  
-			    android:id="@+id/text1"
-			    android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_height="wrap_content"
-				android:layout_width="fill_parent" 
-			    android:text="@string/oi_distribution_eula_title"
-    			android:gravity="center"
-			    android:textStyle="bold"
-			    android:layout_marginTop="10dip"
-			    android:layout_marginBottom="10dip"
-				/><!-- 
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:text="@string/oi_distribution_eula_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        /><!--
 			    android:layout_height="34dip"  -->
-		<ScrollView
-				android:layout_width="fill_parent"
-				android:layout_height="0dip"
-				android:layout_weight="1"
-			    android:layout_marginBottom="10dip"
-				android:layout_marginLeft="5dip"
-			>
-			<LinearLayout
-				android:id="@+id/container1"
-				android:orientation="vertical"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				>
-				<ImageView android:id="@+id/imageview"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center"
-					/>
-				<TextView  
-				    android:id="@+id/text2"
-					android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-			    	android:textStyle="bold"
-				    android:layout_marginLeft="10dip"
-				    android:layout_marginRight="10dip"
-				    android:layout_marginTop="10dip"
-				    android:layout_marginBottom="10dip"
-					/>
-				<TextView  
-				    android:id="@+id/text"
-					android:layout_width="wrap_content" 
-				    android:layout_height="wrap_content" 
-				    android:autoLink="web"
-			    	android:bufferType="spannable"
-				    android:layout_marginLeft="10dip"
-				    android:layout_marginRight="10dip"
-				    android:layout_marginTop="10dip"
-				    android:layout_marginBottom="10dip"
-					/>
-			</LinearLayout>
-		</ScrollView>
-		<include layout="@layout/oi_distribution_buttonbar" android:id="@+id/buttonbar"/>		
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginStart="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginEnd="5dip"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/container1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/app_icon_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:ignore="contentDescription"
+                />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:autoLink="web"
+                android:bufferType="spannable"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/buttonbar"
+        layout="@layout/oi_distribution_buttonbar"/>
 </LinearLayout>

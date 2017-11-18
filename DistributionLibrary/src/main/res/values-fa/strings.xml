@@ -24,7 +24,7 @@
 	
 	<!-- EULA welcome message. %s is an application name, e.g. "... (EULA) for OI Notepad".
 		Translation can be as long as required. -->
-	<string name="oi_distribution_eula_message">لطفا برای خواندن و پذیرفتن توافقنامه مجوز کاربر نهایی زیر (EULA) برای ٪ s با</string>
+	<string name="oi_distribution_eula_message">لطفا برای خواندن و پذیرفتن توافقنامه مجوز کاربر نهایی زیر (EULA) برای s% با</string>
 	
 	<!-- Button: Accept terms of EULA. -->
 	<string name="oi_distribution_eula_accept">پذیرش</string>
@@ -38,7 +38,7 @@
 	<string name="oi_distribution_name_and_version">%1$s %2$s</string>
 	
 	<!-- Welcome message. %s is an application name. -->
-	<string name="oi_distribution_newversion_message">به این ورژن جدید از خوش آمدید ٪ s با</string>
+	<string name="oi_distribution_newversion_message">به این ورژن جدید از خوش آمدید s% با</string>
 	
 	<string name="oi_distribution_newversion_recent_changes">تغییرات اخیر :</string>
 	

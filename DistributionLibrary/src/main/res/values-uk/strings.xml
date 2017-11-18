@@ -90,9 +90,9 @@
     <string name="oi_distribution_safe_not_available_decrypt">Нема доступної сумісної програми шифрування. \n\nПримітка: Ви повинні відновити головний ключ з файлу резервної копії для того, щоб отримати доступ до раніше зашифрованих даних.</string>
     
     <!-- Dialog message: %s is the name of an application (e.g. "OI Notepad"). -->
-    <string name="oi_distribution_download_market_message">Будь ласка,  завантажте % S з Маркету або OpenIntents сайту.</string>
+    <string name="oi_distribution_download_market_message">Будь ласка,  завантажте %s з Маркету або OpenIntents сайту.</string>
     <!-- Dialog message: %s is the name of an application (e.g. "OI Notepad"). -->
-    <string name="oi_distribution_download_message">Будь ласка,  завантажте % S з OpenIntents сайту.</string>
+    <string name="oi_distribution_download_message">Будь ласка,  завантажте %s з OpenIntents сайту.</string>
     <!-- Dialog button: download the suggested application from Android Market. -->
     <string name="oi_distribution_download_market">Завантажте з Маркету</string>
     <!-- Dialog button: download the suggested application from the developer web site. -->

@@ -14,3 +14,10 @@ dependencies {
     compile 'com.github.openintents:distribution:{latest version}'
 }
 ```
+
+###
+Replace strings
+* oi_distribution_recent_changes
+* oi_distribution_license_short
+
+Add about details in meta data in AndroidManifest.xml
