@@ -9,11 +9,11 @@ android {
     }
 
     defaultConfig {
-        versionCode 4
+        versionCode 1
         versionName '1.0'
         minSdkVersion 4
         targetSdkVersion rootProject.ext.targetSdkVersion
-        applicationId 'org.openintents.distribution.demo'
+        applicationId 'org.openintents.distribution.demoabout'
     }
     buildToolsVersion rootProject.ext.buildToolsVersion
 }

@@ -17,9 +17,11 @@
 package org.openintents.distribution;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
+import org.openintents.distribution.about.About;
 import org.openintents.intents.AboutMiniIntents;
 import org.openintents.util.IntentUtils;
 import org.openintents.util.VersionUtils;
@@ -32,9 +34,7 @@ import org.openintents.util.VersionUtils;
  *
  */
 public class AboutDialog extends DownloadAppDialog {
-//	private static final String TAG = "About";
-//	private static final boolean DEBUG_NO_OI_ABOUT = false;
-	
+
 	public AboutDialog(Context context) {
 		super(context,
 				R.string.oi_distribution_aboutapp_not_available,
@@ -55,6 +55,7 @@ public class AboutDialog extends DownloadAppDialog {
 	
 	public static void showDialogOrStartActivity(Activity activity, int dialogId) {
 		Intent intent = new Intent(AboutMiniIntents.ACTION_SHOW_ABOUT_DIALOG);
+		intent.setComponent(new ComponentName(activity, About.class));
 		intent.putExtra(AboutMiniIntents.EXTRA_PACKAGE_NAME, activity.getPackageName());
 		
 		if (IntentUtils.isIntentAvailable(activity, intent)) {

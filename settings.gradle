@@ -1,3 +1,4 @@
 include ':DistributionLibrary'
 include ':DistributionDemo'
+include ':DistributionDemoAbout'
 rootProject.name = 'distribution'
