@@ -34,7 +34,7 @@ import android.widget.Toast;
  * @author Peli
  */
 public class DownloadAppDialog extends AlertDialog implements OnClickListener {
-	private static final String TAG = "StartSaveActivity";
+	private static final String TAG = "DownloadAppDialog";
 
     Context mContext;
     String mDownloadAppName;
@@ -79,7 +79,7 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
         mDownloadWebsite = downloadWebsite;
         
         mMarketAvailable = org.openintents.distribution.MarketUtils.isMarketAvailable(mContext, mDownloadPackageName);
-        mHideMarketLink = org.openintents.distribution.MarketUtils.hideMarketLink(mContext);
+        mHideMarketLink = shouldHideMarketLink();
         
         StringBuilder sb = new StringBuilder();
         sb.append(message);
@@ -97,11 +97,19 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
         setTitle(mContext.getString(R.string.oi_distribution_download_title,
         		mDownloadAppName));
 
-		setButton(BUTTON_POSITIVE, mContext.getText(R.string.oi_distribution_download_market), this);
+        if (!mHideMarketLink) {
+			setButton(BUTTON_POSITIVE, mContext.getText(R.string.oi_distribution_download_market), this);
+		} else {
+        	getButton(BUTTON_POSITIVE).setVisibility(View.GONE);
+		}
 		setButton(BUTTON_NEGATIVE, mContext.getText(R.string.oi_distribution_download_web), this);
 		setButton(BUTTON_NEUTRAL, mContext.getText(android.R.string.cancel), this);
 	}
-    
+
+	protected boolean shouldHideMarketLink() {
+		return MarketUtils.hideMarketLink(mContext);
+	}
+
 	public void onClick(DialogInterface dialog, int which) {
 		Intent intent;
 		
@@ -129,7 +137,6 @@ public class DownloadAppDialog extends AlertDialog implements OnClickListener {
 	 * Start an activity but prompt a toast if activity is not found
 	 * (instead of crashing).
 	 * 
-	 * @param context
 	 * @param intent
 	 */
 	public void startSaveActivity(Intent intent) {

@@ -52,7 +52,12 @@ public class AboutDialog extends DownloadAppDialog {
         sb.append(mMessageText);
         setMessage(sb.toString());
 	}
-	
+
+	@Override
+	public boolean shouldHideMarketLink() {
+		return true;
+	}
+
 	public static void showDialogOrStartActivity(Activity activity, int dialogId) {
 		Intent intent = new Intent(AboutMiniIntents.ACTION_SHOW_ABOUT_DIALOG);
 		intent.setComponent(new ComponentName(activity, About.class));
