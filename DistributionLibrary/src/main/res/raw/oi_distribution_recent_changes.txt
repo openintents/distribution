@@ -1,4 +1,10 @@
 ---------------------------------------------------------
+release: 2.2.0
+date: 2017-12-12
+- remove intent filter for about dialog action
+- clean up code
+
+---------------------------------------------------------
 release: 2.1.1
 date: 2017-12-12
 - improve About demo
