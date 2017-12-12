@@ -49,9 +49,11 @@ public class AboutUtils {
                 String[] array = null;
                 try {
                     int id = md.getInt(metadata);
-                    Resources resources = context.getPackageManager()
-                            .getResourcesForApplication(packagename);
-                    array = resources.getStringArray(id);
+                    if (id != 0) {
+                        Resources resources = context.getPackageManager()
+                                .getResourcesForApplication(packagename);
+                        array = resources.getStringArray(id);
+                    }
                 } catch (NameNotFoundException e) {
                     Log.e(TAG, "Package name not found ", e);
                 } catch (NumberFormatException e) {
@@ -60,11 +62,7 @@ public class AboutUtils {
                     Log.e(TAG, "Resource not found.", e);
                 }
 
-                if (array != null) {
-                    return array;
-                } else {
-                    return null;
-                }
+                return array;
             } else {
                 return null;
             }
@@ -99,11 +97,13 @@ public class AboutUtils {
                 //Still try metadata but don't expect a ready string (get it from the resources).
                 try {
                     int id = md.getInt(metadata);
-                    Resources resources = context.getPackageManager()
-                            .getResourcesForApplication(packagename);
-                    String text = resources.getString(id);
-                    if (!TextUtils.isEmpty(text)) {
-                        return text;
+                    if (id != 0) {
+                        Resources resources = context.getPackageManager()
+                                .getResourcesForApplication(packagename);
+                        String text = resources.getString(id);
+                        if (!TextUtils.isEmpty(text)) {
+                            return text;
+                        }
                     }
                 } catch (NameNotFoundException e) {
                     Log.e(TAG, "Package name not found ", e);

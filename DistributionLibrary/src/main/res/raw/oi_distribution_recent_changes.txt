@@ -1,4 +1,15 @@
 ---------------------------------------------------------
+release: 2.1.1
+date: 2017-12-12
+- improve About demo
+- ignore unknown resources
+
+---------------------------------------------------------
+release: 2.1.0
+date: 2017-12-12
+- hide market link for OI About app
+
+---------------------------------------------------------
 release: 2.0.0
 date: 2017-11-18
 - new About activity replacing the OI About app
