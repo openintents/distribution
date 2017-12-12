@@ -23,6 +23,7 @@ public class MetaDataReader {
     public static final String SCHEMA = "http://schemas.openintents.org/android/about";
     public static final String ATTR_VALUE = "value";
     public static final String ATTR_RESOURCE = "resource";
+    private static final String TAG = MetaDataReader.class.getSimpleName();
 
     private Context ctx;
     private String packagename;
@@ -110,28 +111,34 @@ public class MetaDataReader {
                             if (resIdName != null) {
                                 int resId = 0;
                                 if (resIdName.startsWith("@")) {
+                                    // oi:resource="@type/name"
                                     resId = resources.getIdentifier(resIdName.substring(1), // Cut the @
                                             null, packagename);
                                 } else {
+                                    // oi:resource="123456"
                                     try {
                                         resId = Integer.parseInt(resIdName);
-                                    } catch (NumberFormatException e) {
+                                    } catch (NumberFormatException ignored) {
                                     }
                                 }
                                 bundle.putInt(tagNameToMetadataName.get(name), resId);
                             } else {
                                 String value = attr.getAttributeValue(SCHEMA, ATTR_VALUE);
                                 if (value.startsWith("@")) {
+                                    // oi:value="@type/name"
                                     int valId = resources.getIdentifier(value.substring(1), null, packagename);
-                                    if (value.contains("string/")) {
-                                        //Can't deal with non-string values, but didn't found any use of them
+                                    if (value.startsWith("@string/")) {
+                                        // oi:value="@string/name"
                                         String valString = resources.getString(valId);
                                         bundle.putString(tagNameToMetadataName.get(name), valString);
                                     } else {
                                         //Cannot process the type, treat it as a resource
+                                        // oi:value="@integer/name" or other resource types
+                                        Log.w(TAG, String.format("attribute %s must be a string or string resource", name));
                                         bundle.putInt(tagNameToMetadataName.get(name), valId);
                                     }
                                 } else {
+                                    // oi:value="a value"
                                     bundle.putString(tagNameToMetadataName.get(name), value);
                                 }
                             }

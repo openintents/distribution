@@ -39,10 +39,8 @@ import android.text.TextUtils;
 import android.text.util.Linkify;
 import android.text.util.Linkify.TransformFilter;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -68,9 +66,7 @@ import java.util.regex.Pattern;
  * @author pjv
  */
 public class About extends TabActivity {
-    //TODO packaging
     //TODO BUG rotating screen broken due to TabHost?
-    //TODO BUG OI Updater does not find OI About.
 
     //private static final String LAUNCHPAD_TRANSLATOR_CREDITS_SEPARATOR = ";";
     //private static final String LAUNCHPAD_TRANSLATOR_CREDITS_REGEX = "("+LAUNCHPAD_TRANSLATOR_CREDITS_SEPARATOR+" )|("+LAUNCHPAD_TRANSLATOR_CREDITS_SEPARATOR+")";
@@ -317,19 +313,6 @@ public class About extends TabActivity {
         String license = getRawResource(packagename, resourceid, false);
 
         mLicenseText.setText(license);
-		/*
-		mLicenseText.setHorizontallyScrolling(!intent.getBooleanExtra(
-				AboutIntents.EXTRA_WRAP_LICENSE, false));
-		mLicenseText.setHorizontalScrollBarEnabled(!intent.getBooleanExtra(
-				AboutIntents.EXTRA_WRAP_LICENSE, false));
-		if (intent.hasExtra(AboutIntents.EXTRA_LICENSE)
-				&& intent.getStringExtra(AboutIntents.EXTRA_LICENSE) != null) {
-			mLicenseText.setText(intent
-					.getStringExtra(AboutIntents.EXTRA_LICENSE));
-		} else {
-    		mLicenseText.setText("");
-    	}
-    	*/
     }
 
     /**
@@ -418,16 +401,14 @@ public class About extends TabActivity {
                 changeLogoImageResource(intent.getStringExtra(AboutIntents.EXTRA_ICON_RESOURCE),
                         packagename);
             } catch (IllegalArgumentException e) {
-                mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
-                //mLogoImage.setImageURI(Uri.EMPTY);
+                setErrorLogo();
             }
         } else if (intent.hasExtra(AboutIntents.EXTRA_ICON_URI)
                 && intent.getStringExtra(AboutIntents.EXTRA_ICON_URI) != null) {
             try {
                 changeLogoImageUri(intent.getStringExtra(AboutIntents.EXTRA_ICON_URI));
             } catch (IllegalArgumentException e) {
-                mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
-                //mLogoImage.setImageURI(Uri.EMPTY);
+                setErrorLogo();
             }
         } else {
             try {
@@ -439,17 +420,18 @@ public class About extends TabActivity {
                 changeLogoImageResource(resourcename, packagename);
             } catch (PackageManager.NameNotFoundException e) {
                 Log.e(TAG, "Package name not found", e);
-                mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
-                //mLogoImage.setImageURI(Uri.EMPTY);
+                setErrorLogo();
             } catch (Resources.NotFoundException e) {
                 Log.e(TAG, "Package name not found", e);
-                mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
-                //mLogoImage.setImageURI(Uri.EMPTY);
+                setErrorLogo();
             } catch (IllegalArgumentException e) {
-                mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
-                //mLogoImage.setImageURI(Uri.EMPTY);
+                setErrorLogo();
             }
         }
+    }
+
+    private void setErrorLogo() {
+        mLogoImage.setImageResource(android.R.drawable.ic_menu_info_details);
     }
 
     /**
@@ -580,7 +562,7 @@ public class About extends TabActivity {
      */
     protected void displayInternationalTranslators(final String packagename) {
 
-        int id = AboutUtils.getMetadataId(metaDataReader, AboutMetaData.METADATA_TRANSLATORS);
+        int id = AboutUtils.getResourceIdMetadata(metaDataReader, AboutMetaData.METADATA_TRANSLATORS);
 
         String text = null;
 

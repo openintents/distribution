@@ -88,29 +88,29 @@ public class AboutUtils {
             //Try meta data of package
             Bundle md = metaDataReader.getBundle();
 
-            if (md != null
-                    && !TextUtils.isEmpty(md
-                    .getString(metadata))) {
-                return md
-                        .getString(metadata);
-            } else if (md != null) {
-                //Still try metadata but don't expect a ready string (get it from the resources).
-                try {
-                    int id = md.getInt(metadata);
-                    if (id != 0) {
-                        Resources resources = context.getPackageManager()
-                                .getResourcesForApplication(packagename);
-                        String text = resources.getString(id);
-                        if (!TextUtils.isEmpty(text)) {
-                            return text;
+            if (md != null) {
+                Object value = md.get(metadata);
+                if (value instanceof String && !TextUtils.isEmpty((String) value)) {
+                    return (String) value;
+                } else {
+                    //Still try metadata but don't expect a ready string (get it from the resources).
+                    try {
+                        int id = md.getInt(metadata);
+                        if (id != 0) {
+                            Resources resources = context.getPackageManager()
+                                    .getResourcesForApplication(packagename);
+                            String text = resources.getString(id);
+                            if (!TextUtils.isEmpty(text)) {
+                                return text;
+                            }
                         }
+                    } catch (NameNotFoundException e) {
+                        Log.e(TAG, "Package name not found ", e);
+                    } catch (NumberFormatException e) {
+                        Log.e(TAG, "Metadata not valid id.", e);
+                    } catch (Resources.NotFoundException e) {
+                        Log.e(TAG, "Resource not found.", e);
                     }
-                } catch (NameNotFoundException e) {
-                    Log.e(TAG, "Package name not found ", e);
-                } catch (NumberFormatException e) {
-                    Log.e(TAG, "Metadata not valid id.", e);
-                } catch (Resources.NotFoundException e) {
-                    Log.e(TAG, "Resource not found.", e);
                 }
             }
             return "";
@@ -125,19 +125,18 @@ public class AboutUtils {
      * @param metadata
      * @return
      */
-    public static int getMetadataId(final MetaDataReader metaDataReader, final String metadata) {
+    public static int getResourceIdMetadata(final MetaDataReader metaDataReader, final String metadata) {
         //Try meta data of package
         Bundle md = metaDataReader.getBundle();
 
         if (md != null) {
             //Still try metadata but don't expect a ready string (get it from the resources).
             try {
-                int id = md.getInt(metadata);
-                return id;
+                return md.getInt(metadata);
             } catch (NumberFormatException e) {
-                Log.e(TAG, "Metadata not valid id.", e);
+                Log.e(TAG, "Metadata not valid id. Using 0 instead", e);
             } catch (Resources.NotFoundException e) {
-                Log.e(TAG, "Resource not found.", e);
+                Log.e(TAG, "Resource not found. Using 0 instead", e);
             }
         }
         return 0;
@@ -170,17 +169,7 @@ public class AboutUtils {
             }
             return id;
         } else {
-            //Try meta data of package
-            Bundle md = metaDataReader.getBundle();
-
-            if (md != null) {
-                // Obtain resource ID and convert to resource name:
-                int id = md.getInt(metadata);
-
-                return id;
-            } else {
-                return 0;
-            }
+            return getResourceIdMetadata(metaDataReader, metadata);
 
         }
     }
