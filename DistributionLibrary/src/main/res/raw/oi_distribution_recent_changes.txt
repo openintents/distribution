@@ -1,4 +1,9 @@
 ---------------------------------------------------------
+release: 3.0.0
+date: 2018-03-15
+- use material design
+
+---------------------------------------------------------
 release: 2.2.0
 date: 2017-12-12
 - remove intent filter for about dialog action
@@ -40,4 +45,4 @@ You can help to improve the translation into your language at Launchpad:
 https://translations.launchpad.net/openintents/trunk
 
 The source code of this free and open source application is available at:
-http://code.google.com/p/openintents
+http://github.com/openintents
