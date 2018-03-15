@@ -3,10 +3,11 @@ package org.openintents.distribution;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DistributionLibraryActivity extends Activity {
+public class DistributionLibraryActivity extends AppCompatActivity {
 
 	static final int MENU_DISTRIBUTION_START = Menu.FIRST;
 	

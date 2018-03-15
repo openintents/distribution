@@ -2,7 +2,6 @@ package org.openintents.distribution;
 
 import org.openintents.util.VersionUtils;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -10,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class InfoActivity extends DistributionLibraryListActivity implements OnItemClickListener {
+public class InfoActivity extends DistributionLibraryActivity implements OnItemClickListener {
 
 	// Override the following variables in init()
     protected int[] mApplications = {};
@@ -63,10 +63,10 @@ public class InfoActivity extends DistributionLibraryListActivity implements OnI
         for (int i = 0; i < mApplications.length; i++) {
         	mApplicationStrings[i] = getString(mApplications[i]);
         }
-        setListAdapter(new FontArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, mApplicationStrings));
-        ListView listview = getListView();
-        
+
+        ListView listview = findViewById(android.R.id.list);
+        listview.setAdapter(new FontArrayAdapter<>(this,
+				android.R.layout.simple_list_item_1, mApplicationStrings));
         listview.setOnItemClickListener(this);
         
         // Set message of activity
