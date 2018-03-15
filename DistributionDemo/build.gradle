@@ -6,12 +6,13 @@ android {
 
     lintOptions {
         abortOnError false
+        disable 'GoogleAppIndexingWarning'
     }
 
     defaultConfig {
         versionCode 4
         versionName '1.0'
-        minSdkVersion 4
+        minSdkVersion 14
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId 'org.openintents.distribution.demo'
     }

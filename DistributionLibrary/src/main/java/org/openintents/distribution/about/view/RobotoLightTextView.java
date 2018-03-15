@@ -5,9 +5,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class RobotoLightTextView extends TextView {
-    private static Typeface robotoLight;
-
+public class RobotoLightTextView extends android.support.v7.widget.AppCompatTextView {
     public RobotoLightTextView(Context context) {
         super(context);
         init();
@@ -24,11 +22,6 @@ public class RobotoLightTextView extends TextView {
     }
 
     private void init() {
-        // Avoid leak as per http://code.google.com/p/android/issues/detail?id=9904
-        if (robotoLight == null) {
-            robotoLight = Typeface.createFromAsset(getContext().getAssets(), "RobotoLight.ttf");
-        }
-
-        setTypeface(robotoLight);
+        setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
     }
 }

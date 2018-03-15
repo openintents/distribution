@@ -73,7 +73,7 @@ public class EulaOrNewVersion {
 		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
 		SharedPreferences.Editor e = sp.edit();
 		e.putBoolean(PREFERENCES_EULA_ACCEPTED, true);
-		e.commit();
+		e.apply();
 	}
 	
 	/**
@@ -102,7 +102,7 @@ public class EulaOrNewVersion {
 		int thisVersion = VersionUtils.getVersionCode(context);
 		SharedPreferences.Editor e = sp.edit();
 		e.putInt(PREFERENCES_VERSION_NUMBER, thisVersion);
-		e.commit();
+		e.apply();
 	}
 
 	private static void startForwardActivity(Activity activity, Class<?> launchClass) {

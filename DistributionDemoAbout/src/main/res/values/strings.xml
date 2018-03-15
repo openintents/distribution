@@ -4,7 +4,7 @@
     <string name="app_name">OI Distribution About Demo</string>
 
     <string name="about_comments">A versatile, minimalistic, expansible simple test application for about screen.</string>
-    <string name="about_copyright">Copyright © 2008-2017 OpenIntents</string>
+    <string name="about_copyright">Copyright © 2008–2018 OpenIntents</string>
     <!-- Add your name here, separated with comma's, if you helped out -->
     <string name="about_website_label">Demp About App at OpenIntents</string>
     <string name="about_website_url">http://www.openintents.org</string>

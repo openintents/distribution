@@ -9,11 +9,12 @@ android {
 
     lintOptions {
         abortOnError false
+        disable 'GoogleAppIndexingWarning'
     }
 
     defaultConfig {
-        versionCode 4
-        minSdkVersion 4
+        versionCode 5
+        minSdkVersion 14
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
 
@@ -23,4 +24,8 @@ android {
         }
     }
     buildToolsVersion rootProject.ext.buildToolsVersion
+}
+
+dependencies {
+    compile 'com.android.support:design:27.1.0'
 }
