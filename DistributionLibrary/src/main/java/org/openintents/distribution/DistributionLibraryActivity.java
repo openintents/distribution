@@ -1,11 +1,11 @@
 package org.openintents.distribution;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DistributionLibraryActivity extends AppCompatActivity {
 

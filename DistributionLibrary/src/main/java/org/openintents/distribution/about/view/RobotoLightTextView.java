@@ -5,7 +5,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class RobotoLightTextView extends android.support.v7.widget.AppCompatTextView {
+public class RobotoLightTextView extends  	com.google.android.material.textview.MaterialTextView  {
     public RobotoLightTextView(Context context) {
         super(context);
         init();

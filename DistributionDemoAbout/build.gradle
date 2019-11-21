@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     lintOptions {
         abortOnError false
@@ -16,7 +15,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId 'org.openintents.distribution.demoabout'
     }
-    buildToolsVersion rootProject.ext.buildToolsVersion
 }
 
 dependencies {

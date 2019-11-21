@@ -23,16 +23,16 @@ import java.io.InputStreamReader;
 
 import org.openintents.util.VersionUtils;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Displays the Eula for the first time, reading it from a raw resource.

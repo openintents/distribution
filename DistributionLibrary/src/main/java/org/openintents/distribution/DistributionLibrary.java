@@ -5,6 +5,8 @@ import android.app.Dialog;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.openintents.distribution.about.About;
+
 public class DistributionLibrary {
 
     public static final int OFFSET_ABOUT = 0;
@@ -85,7 +87,7 @@ public class DistributionLibrary {
                 mActivity.showDialog(mFirstDialogId + OFFSET_UPDATE);
                 return true;
             case OFFSET_ABOUT:
-                AboutDialog.showDialogOrStartActivity(mActivity,
+                About.showDialogOrStartActivity(mActivity,
                         mFirstDialogId + OFFSET_ABOUT);
                 return true;
             case OFFSET_SUPPORT:
@@ -102,8 +104,6 @@ public class DistributionLibrary {
 
     public Dialog onCreateDialog(int id) {
         switch (id - mFirstDialogId) {
-            case OFFSET_ABOUT:
-                return new AboutDialog(mActivity);
             case OFFSET_UPDATE:
                 return new UpdateDialog(mActivity);
             case OFFSET_SUPPORT:
@@ -117,10 +117,6 @@ public class DistributionLibrary {
     }
 
     public void onPrepareDialog(int id, Dialog dialog) {
-        switch (id - mFirstDialogId) {
-            case OFFSET_ABOUT:
-                AboutDialog.onPrepareDialog(mActivity, dialog);
-                break;
-        }
+        // e.g. hide items
     }
 }

@@ -23,6 +23,7 @@
 
 package org.openintents.distribution.about;
 
+import android.app.Activity;
 import android.app.TabActivity;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -50,6 +51,8 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 
 import org.openintents.distribution.R;
+import org.openintents.intents.AboutMiniIntents;
+import org.openintents.util.IntentUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -748,7 +751,6 @@ public class About extends TabActivity {
         super.onCreate(savedInstanceState);
 
         Resources res = getResources();
-        Log.d("identifier", res.getString(res.getIdentifier("string/about_translators", null, getPackageName())));
 
         Map<String, String> metaDataNameToTagName = new HashMap<String, String>();
         //TODO Move this to detached file?
@@ -928,5 +930,17 @@ public class About extends TabActivity {
         checkCreditsAvailable();
 
         setResult(RESULT_OK);
+    }
+
+    public static void showDialogOrStartActivity(Activity activity, int dialogId) {
+        Intent intent = new Intent(AboutMiniIntents.ACTION_SHOW_ABOUT_DIALOG);
+        intent.setComponent(new ComponentName(activity, About.class));
+        intent.putExtra(AboutMiniIntents.EXTRA_PACKAGE_NAME, activity.getPackageName());
+
+        if (IntentUtils.isIntentAvailable(activity, intent)) {
+            activity.startActivity(intent);
+        } else {
+            activity.showDialog(dialogId);
+        }
     }
 }
